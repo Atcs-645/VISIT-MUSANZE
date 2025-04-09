@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Musanze Tour">
+    <title>Visit Musanze</title>
+    <link rel="icon" href="images/large.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+          background-image: url("C:\Users\PC\Desktop\visit\dmusanze.jpg");
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f3f4f6, #e0e7ff);
+            color: #1d3557;
+            overflow-x: hidden;
+        }
+        h2, h3 {
+            text-align: center;
+            color: #b92a2a;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1d3557;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav img {
+            height: 40px;
+        }
+        nav .options button {
+            background: none;
+            border: 2px solid #b92a2a;
+            color: #b92a2a;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        nav .options button:hover {
+            background-color: #b92a2a;
+            color: white;
+        }
+        nav .options button a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Hotels Section */
+        .hotels {
+            padding: 50px;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 80%;
+        }
+        .hotels h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        /*
+        .hotels .hotel {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hotels .hotel:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }*
+
+        /* Enhanced Photo Styles */
+        .hotels div {
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 10px 20px;
+            border-left: 5px solid #b92a2a;
+            background: #f8fafc;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .hotels div:hover {
+            background: #ebefff;
+            transform: scale(1.02);
+        }
+        .hotel-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Star Ratings */
+        .star-rating {
+            color: #ffc107;
+            margin-top: 5px;
+            display: block;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        /* More Hotels Button */
+        .morehotels {
+            margin-top: 20px;
+            border: 2px solid #b92a2a;
+            color: #b92a2a;
+            background: none;
+            border-radius: 5px;
+            padding: 8px 8px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .morehotels:hover {
+            background-color: #b92a2a;
+            color: white;
+        }
+
+        /* Additional Hotels */
+        #additional-hotels {
+            display: none;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div id="navbar">
+            <nav>
+                <img src="clogo.png" alt="Logo">
+                <div class="options">
+                    <button><a href="home.html">HOME  <i class="fa-solid fa-house"></i></a></button>
+                    <button><a href="destination.html">DESTINATIONS  <i class="fa-solid fa-map-location"></i></a></button>
+                    <button><a href="trip.html">PLAN A TRIP  <i class="fa-solid fa-earth-africa"></i></a></button>
+                    <button><a href="https://www.google.com/maps">EXPLORE <i class="fa-solid fa-map"></i></a></button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hotels Section -->
+    <div class="hotels">
+        <h3>Your dream Hotels in Musanze</h3>
+        <a href="https://www.oneandonlyresorts.com/gorillas-nest" target="_blank" rel="noopener noreferrer"><div>
+            <h2>One and Only Hotel <i class="fa-solid fa-location-dot"></i></h2>
+            <p>Experience luxury amidst nature at One and Only Hotel near Volcanoes National Park.</p>
+            <div style="display: flex; justify-content: center; gap: 10px;"> 
+            <img src="C:\Users\PC\Desktop\visit\oao.jpg" alt="One and Only Hotel" class="hotel-image">
+            <img src="C:\Users\PC\Desktop\visit\ioao.jpg" alt="One and Only Hotel" class="hotel-image">
+             <div class="star-rating" style="display: block;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            </div>
+        </div></a>
+        <a href="https://singita.com/lodge/singita-kwitonda-lodge/" target="_blank" rel="noopener noreferrer"><div>
+            <h2>Singita Lodge <i class="fa-solid fa-location-dot"></i></h2>
+            <p>A nurturing sanctuary offering stunning mountain views.</p>
+            <div style="display: flex; justify-content: center; gap: 10px;"> 
+            <img src="C:/Users/PC/Desktop/MUSANZE TOUR/singita.jpg" alt="Singita Lodge" class="hotel-image" style="height: auto; width: 40%;">
+            <img src="C:\Users\PC\Downloads\singita2.jpg" alt="Singita Lodge" class="hotel-image" style="height: auto; width: 40%;">
+            <div class="star-rating" style="display: block;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div></a>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi21KuN0LuMAxUvpVAGHdI5GlMYABAAGgJkZw&co=1&gclid=CjwKCAjw47i_BhBTEiwAaJfPpvUwlseJt_Ta_MoXpEv1eEz7eBdKKBnDUZSJgLTFcPyljqf8s5NnERoCXq0QAvD_BwE&ggladgrp=1441539624839659847&gglcreat=177553035287463400&ohost=www.google.com&cid=CAESVuD2OT6HM7k91YL5vQwXCgD-od7wjmJgX2EuuFlqhvF2Is506sWcTHUm3Td0peE2870SlSyekPAoTdfNtN20auEQeRiwi--SNOFELwFBkg0NcEBCwQ_u&sig=AOD64_230wPsFkyr1SV6pwwqwiarbhnAFA&q&adurl&ved=2ahUKEwjurKeN0LuMAxURUEEAHUENCy0Q0Qx6BAgGEAQ" target="_blank" rel="noopener noreferrer"><div>
+            <h2>Fatima Hotel <i class="fa-solid fa-location-dot"></i></h2>
+            <p>Comfortable accommodations for travelers exploring Musanze.</p>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+            <img src="C:\Users\PC\Desktop\visit\fatima.jpg" alt="Fatima Hotel" class="hotel-image" style="height: auto; width: 40%;">
+            <img src="C:\Users\PC\Desktop\visit\ifatima.jpg" alt="Fatima Hotel" class="hotel-image" style="height: auto; width: 40%;">
+            <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div></a>
+        <button class="morehotels">More Hotels</button>
+        <div id="additional-hotels">
+
+            <a href="https://classicresortlodge.com/" target="_blank" rel="noopener noreferrer"><div>
+                <h2>Classic Lodge <i class="fa-solid fa-location-dot"></i></h2>
+                <p>World-class destination for luxurious accommodation.</p>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                <img src="C:\Users\PC\Desktop\visit\classic.jpg" alt="Classic Lodge" class="hotel-image"  style="height: auto; width: 40%;">
+                <img src="C:\Users\PC\Desktop\visit\classic2.jpg" alt="Classic Lodge" class="hotel-image"  style="height: auto; width: 40%;">
+                <div class="star-rating" style="display: block;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                </div>
+            </div></a>
+            <a href="https://virungahotel.com/" target="_blank" rel="noopener noreferrer"> <div>
+                
+                <h2>Virunga Hotel <i class="fa-solid fa-location-dot"></i></h2>
+                <p>Discover the serene beauty of Lake Ruhondo.</p>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                <img src="C:\Users\PC\Desktop\visit\virunga2.jpg" alt="Virunga Hotel" class="hotel-image" style="height: auto; width: 40%;">
+                <img src="C:\Users\PC\Desktop\visit\ivirunga.jpg" alt="Virunga Hotel" class="hotel-image" style="height: auto; width: 40%;">
+                <div class="star-rating" style="display: block;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </div>
+            </div></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Visit Musanze. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle Additional Hotels
+        const moreButton = document.querySelector('.morehotels');
+        const additionalHotels = document.getElementById('additional-hotels');
+        moreButton.addEventListener('click', () => {
+            if (additionalHotels.style.display === 'none' || additionalHotels.style.display === '') {
+                additionalHotels.style.display = 'block';
+                moreButton.textContent = 'Less Hotels';
+            } else {
+                additionalHotels.style.display = 'none';
+                moreButton.textContent = 'More Hotels';
+            }
+        });
+    </script>
+</body>
+</html>

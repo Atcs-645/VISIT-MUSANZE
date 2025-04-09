@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visit Musanze</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        /* Sections */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h3 {
+            color: #1d3557;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Buttons */
+        button {
+            padding: 10px 15px;
+            background-color: #1d3557;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #457b9d;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-wrapper {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #8f858580;
+            border: 3px solid #1d1b1b;
+            border-radius: 5px;
+            padding: 20px;
+            z-index: 2;
+        }
+
+        .dropdown-wrapper:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content ul li {
+            color: black;
+        }
+
+        .dropdown-content ul li a {
+            text-decoration: none;
+            color: #1d3557;
+        }
+
+        .dropdown-content ul li:hover {
+            background-color: #f1f1f1;
+        }
+        body {
+          background-image: url("C:\Users\PC\Desktop\visit\dmusanze.jpg");
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f3f4f6, #e0e7ff);
+            color: #1d3557;
+            overflow-x: hidden;
+        }
+        h2, h3 {
+            text-align: center;
+            color: #b92a2a;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1d3557;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav img {
+            height: 40px;
+        }
+        nav .options button {
+            background: none;
+            border: 2px solid #b92a2a;
+            color: #b92a2a;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        nav .options button:hover {
+            background-color: #b92a2a;
+            color: white;
+        }
+        nav .options button a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Destinations Section */
+        .destinations {
+            padding: 50px;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 80%;
+        }
+        .destinations h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .destinations div {
+            margin-bottom: 30px;
+            text-align: left;
+            padding: 10px 20px;
+            border-left: 5px solid #b92a2a;
+            background: #f8fafc;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .destinations div:hover {
+            background: #ebefff;
+            transform: scale(1.02);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div id="navbar">
+            <nav>
+                <img src="clogo.png" alt="Logo">
+                <div class="options">
+                    <button><a href="home.html">HOME  <i class="fa-solid fa-house"></i></a></button>
+                    <button><a href="destination.html">DESTINATIONS <i class="fa-solid fa-map-location"></i></a></button>
+                    <button><a href="trip.html">PLAN A TRIP  <i class="fa-solid fa-earth-africa"></i></a></button>
+                    <button><a href="https://www.google.com/maps">EXPLORE <i class="fa-solid fa-map"></i> </a> </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Content Section -->
+    <div style="padding: 20px;">
+        <div class="destinations">
+        <h2 style="text-align: center;">Plan Your Visit</h2>
+       <div>
+            <h3>Accommodations</h3>
+            <ul>
+                <li>La Locanda - Cozy and peaceful.</li>
+                <div style="display: flex; justify-content: center; gap: 10px;"> 
+                    <img src="C:\Users\PC\Desktop\visit\cocanda.jpg" alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; right: 70%; display: flex;">
+                    <img src="C:\Users\PC\Desktop\visit\locanda2.jpg" alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; right: 70%; display: flex;">
+                </div> 
+                <p></p>
+            </ul>
+        </div>
+        <div>
+            <h3>Cultural Centers</h3>
+            <ul>
+                <li>Iby'iwacu Cultural Village - Traditional music and dance.</li>
+                <div style="display: flex; justify-content: center; gap: 10px;"> 
+                    <img src="C:\Users\PC\Desktop\visit\iwacu2.jpg" alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; right: 70%; display: flex;">
+                    <img src="C:\Users\PC\Desktop\visit\iwacu.jpg" alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; right: 70%; display: flex;">
+                </div> 
+            </ul>
+       </div>
+        <div>
+            <h3>Dining Options</h3>
+            <ul>
+                <li>Afri-Indian Restaurant - African-Indian fusion.</li>
+                <div style="display: flex; justify-content: center; gap: 10px;"> 
+                    <img src="C:\Users\PC\Desktop\visit\afro2.jpg" alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px; position: relative; right: 0; display: flex;">
+                    <img src="C:\Users\PC\Desktop\visit\afro.jpg"alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px;position: relative; right: 0; display: flex;">
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g317075-d14932544-Reviews-Migano_Cafe-Ruhengeri_Musanze_District_Northern_Province.html" style="text-decoration: none; color: #1d1b1b;">
+                    <div style="position: relative; display: flex;">
+                    <p style="display: block; position:relative;">Don't miss out the Tasty recipes from our best trained chefs all over the world</p>
+                <ul>
+                    <li>BreakFast</li>
+                    <li>Lunch</li>
+                    <li>Dinner</li>
+                </ul>
+            </a> 
+               </div>
+                </div> 
+                <li>Good To Back - Casual quick bites.</li>
+                <div style="display: flex; justify-content: center; gap: 10px;"> 
+                    <img src="C:\Users\PC\Desktop\visit\quick.jpg" alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px; position: relative; right: 0; display: flex;">
+                    <img src="C:\Users\PC\Desktop\visit\quick2.jpg"alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px;position: relative; right: 0; display: flex;">
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g317075-d14932544-Reviews-Migano_Cafe-Ruhengeri_Musanze_District_Northern_Province.html" style="text-decoration: none; color: #1d1b1b;">
+                    <div style="position: relative; display: flex;">
+                    <p>Want some best Touristic bites Have these</p>
+                   <ul>
+                    <li>Burgers</li>
+                    <li>Coffee</li>
+                    <li>Quick bites</li>
+                 </ul>
+                </a>
+               </div>
+               </div>
+                <li>Migano</li>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                    <img src="C:\Users\PC\Desktop\visit\migano.jpg" alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px; position: relative; right: 0; display: flex;">
+                    <img src="C:\Users\PC\Desktop\visit\migano2.jpg" alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px;position: relative; right: 0; display: flex;">
+                <a href="https://www.tripadvisor.com/Restaurant_Review-g317075-d14932544-Reviews-Migano_Cafe-Ruhengeri_Musanze_District_Northern_Province.html" style="text-decoration: none; color: #1d1b1b;"></a>
+                    <div style="position: relative; display: flex;">
+                    <p>Want some best Touristic bites Have these</p>
+                    <ul>
+                    <li>Mix Grill</li>
+                    <li>Lasagnia Pasta</li>
+                    <li>Paneer Tika Masala </li>
+                </ul>
+                </a>
+               </div>
+              </div> 
+
+<h3>Want some Transport</h3>
+            <ul>
+                <li>LUCKYS TRAVEL TOURS LTD</li>
+                <div style="display: flex; justify-content: center; gap: 10px;"> 
+                    <img src="C:\Users\PC\Desktop\visit\lucky.jpg"s alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; position: relative; right: 0; display: flex;">
+                    <a href=https://rwanda.worldplaces.me/view-place/28712195-lucky-s-travel-tours.html style="text-decoration: none; color: #1d1b1b;">
+                    <p style="display: block; position:relative;">Don't be bothered by transport</p>
+            </a> 
+               </div>
+                </div>
+            </ul>
+
+            <ul>
+                <div>
+                <li>Kigali Atlantis Tours Ltd</li>
+                
+                <div style="display: flex; justify-content: center; gap: 10px;"> 
+                    <img src="C:\Users\PC\Desktop\visit\kigali1.jpg" alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; right: 70%; display: flex;">
+                    <img src="C:\Users\PC\Desktop\visit\kigali2.jpg" alt="Virunga" style="width: 30%;  height: auto; border-radius: 5px; right: 70%; display: flex;">
+                                  
+                     <a href= "https://www.tripadvisor.com/Attraction_Review-g293829-d23963137-Reviews-Kigali_Atlantis_Tours_Ltd-Kigali_Kigali_Province.html" style="text-decoration: none; color: #1d1b1b;">
+                   <p>Choose Kigali Atlantis Tuors Ltd</p>
+                </a>
+               </div>
+              </div>
+              </ul> 
+              <div>
+               <ul> 
+                <li>Kigali Airport Transfers to Musanze</li>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                    <img src="C:\Users\PC\Downloads\shuttle2.jpg" alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px; position: relative; right: 0; display: flex;">
+                    <img src="C:\Users\PC\Downloads\shuttle.jpg" alt="Virunga" style="width: 300px;  height: 300px; border-radius: 5px;position: relative; right: 0; display: flex;">
+                <a href="https://kigalishuttle.com/" style="text-decoration: none; color: #1d1b1b;"></a>
+                    <p>Want some best Touristic bites Have these</p>
+                </a>
+               </div>
+              </div> 
+              </div> 
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Visit Musanze. All rights reserved.</p>
+    </footer>
+</body>
+</html>

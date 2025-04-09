@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visit Musanze</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0;">
+    <!-- Enhanced Header -->
+    <header style="background-color: rgba(156, 154, 154, 0.997); color: rgb(158, 142, 110); padding: 20px; text-align: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+        <img src="C:\Users\PC\Desktop\MUSANZE TOUR\clogo.png" alt="Logo" style="height: 60px; width: auto; margin-bottom: 10px;">
+        <h1 style="margin: 0; font-size: 2.5em;">Welcome to Musanze</h1>
+        <p style="margin: 5px 0; font-size: 1.2em;">Experience Adventure, Beauty, and Culture in Rwanda's Northern Province</p>
+    </header>
+
+    <!-- Background Video -->
+    <div style="position: relative; overflow: hidden;">
+        <video autoplay muted loop id="myVideo" style="width: 100%; height: auto; display: block;">
+            <source src="C:\Users\PC\Downloads\Gorilla Trekking in Rwanda's 🇷🇼 Volcanoes National Park.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <div style="position: sticky; top: 0; z-index: 1000; background-color: #1d3557; padding: 10px; display: flex; justify-content: space-between; align-items: center; color: white;">
+        <img src="C:\Users\PC\Desktop\MUSANZE TOUR\clogo.png" alt="Logo" style="height: 40px; width: 160px;">
+        <div style="display: flex; gap: 10px;">
+            <button style="background: #1d3557; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">HOME  <i class="fa-solid fa-house"></i></button>
+            <div class="dropdown-wrapper" style="position: relative;">
+                <button style="background-color: #1d3557; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;"><a href="destination.html" style="text-decoration: none; color: white;">DESTINATIONS <i class="fa-solid fa-map-location"></i></a></button>
+                <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background-color: #8f858580; border: 3px solid #1d1b1b; border-radius: 5px; padding: 20px; z-index: 2;">
+                    <ul style="list-style: none; margin: 0; padding: 0; color: black;">
+                        <li style="padding: 10px; font-weight: bold;"> Bisate <i class="fa-solid fa-location-dot"></i> <a href="destination.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li style="padding: 10px; font-weight: bold;"> Virunga <i class="fa-solid fa-location-dot"></i> <a href="destination.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li style="padding: 10px; font-weight: bold;"> Musanze City <i class="fa-solid fa-location-dot"></i> <a href="destination.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li style="padding: 10px; font-weight: bold;"> Red Rocks <i class="fa-solid fa-location-dot"></i> <a href="destination.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown-wrapper" style="position: relative;">
+                <button style="background-color: #1d3557; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;"><a href="trip.html" style="text-decoration: none; color: white;">TRIP  <i class="fa-solid fa-earth-africa"></i></a></button>
+                <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background-color: #8f858580; border: 3px solid #1d1b1b; border-radius: 5px; padding: 20px; z-index: 2;">
+                    <ul style="list-style: none; margin: 0; padding: 0; color: black;">
+                        <li style="padding: 10px; font-weight: bold;"><i class="fa-solid fa-bed"></i></i> Accomodation <a href="trip.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li style="padding: 10px; font-weight: bold;"><i class="fa-solid fa-road"></i>Itineraries <a href="trip.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li style="padding: 10px; font-weight: bold;"><i class="fa-solid fa-route"></i> Cultural Tours <a href="trip.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li style="padding: 10px; font-weight: bold;"><i class="fa-solid fa-lightbulb"></i> information <a href="trip.html" style="text-decoration: none; color: #1d3557;"><i class="fa-solid fa-arrow-right"></i></a></li>
+                         </ul>
+                </div>
+            </div>
+            <button style="background-color: #1d3557; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;"><a href="https://www.google.com/maps/place/Ruhengeri/" style="color: white; text-decoration: none;">EXPLORE <i class="fa-solid fa-map"></i></a></button>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div style="padding: 20px; text-align: center;">
+        <h1>Welcome to Musanze Tour</h1>
+        <p>"Discover Rwanda’s Northern Province, home to gorilla trekking, mountain hikes, and vibrant culture."</p>
+        <button onclick="toggleVideo()" style="padding: 10px 15px; background-color: #1d3557; color: white; border: none; border-radius: 5px; cursor: pointer;">Pause</button>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 20px; background-color: #1d3557; color: white;">
+        <p>&copy; 2025 Visit Musanze. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Background video toggle
+        function toggleVideo() {
+            var video = document.getElementById("myVideo");
+            var btn = event.target;
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+
+        // Dropdown hover effects
+        document.querySelectorAll('.dropdown-wrapper').forEach(wrapper => {
+            const button = wrapper.querySelector('button');
+            const dropdown = wrapper.querySelector('.dropdown-content');
+            button.addEventListener('mouseenter', () => {
+                dropdown.style.display = 'block';
+            });
+            wrapper.addEventListener('mouseleave', () => {
+                dropdown.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
