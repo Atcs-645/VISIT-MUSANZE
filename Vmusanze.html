@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Musanze</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-gray-100 font-inter">
+
+    <nav class="bg-gradient-to-r from-green-700 to-green-900 p-4 shadow-lg rounded-b-xl">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="text-white text-3xl font-bold font-inter rounded-md px-3 py-1 bg-green-800 shadow-md">
+                Visit Musanze
+            </div>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span class="font-semibold">Home</span>
+                </button>
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="destinations">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span class="font-semibold">Destinations</span>
+                </button>
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="trip">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tent"><path d="M10.3 21a2 2 0 0 0 3.4 0L21 11H3Z"/><path d="M12 2v9"/><path d="m3 11 9 9 9-9"/></svg>
+                    <span class="font-semibold">Trip</span>
+                </button>
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="sports">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bike"><path d="M5 18H3v-2h2"/><path d="M10 18H8v-2h2"/><path d="M17 18h-2v-2h2"/><path d="M12 18V6H7"/><path d="M12 6c3.77 0 5.5 2.81 6 6v4h2v-4c0-3.79-1.25-6-6-6z"/><circle cx="12" cy="18" r="1"/><circle cx="7" cy="18" r="1"/></svg>
+                    <span class="font-semibold">Sports Activities</span>
+                </button>
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="food">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2l-8 8v11h10v-7Z"/><path d="M15 11v7"/></svg>
+                    <span class="font-semibold">Food & Drinks</span>
+                </button>
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="advertise">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <span class="font-semibold">Advertise</span>
+                </button>
+                <button class="nav-item text-white flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300 transform hover:scale-105 shadow-md" data-page="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span class="font-semibold">Login</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app-content">
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
