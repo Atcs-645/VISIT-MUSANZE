@@ -1,0 +1,32 @@
+/* style.css */
+
+/* Import Google Fonts (Inter, if used in original design) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+/* Basic styles to ensure font-inter applies if not fully handled by Tailwind base */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* You can add any custom CSS here if needed, beyond Tailwind's utility classes. */
+/* For instance, if you have very specific hover effects not easily done with Tailwind */
+/* Example: */
+/* .nav-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+} */
+
+/* Specific aspect ratio for the video container */
+.aspect-w-16 {
+    position: relative;
+    width: 100%;
+}
+.aspect-h-9 {
+    padding-bottom: 56.25%; /* 9 / 16 * 100 */
+}
+.aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
