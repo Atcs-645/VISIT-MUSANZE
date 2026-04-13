@@ -8,24 +8,26 @@ const EMAILJS_TEMPLATE_ID = 'template_f8pccge';
 const EMAILJS_PUBLIC_KEY  = 'QICH0i1piXaX-4Rtx';
 
 // ── Wikimedia image helper ───────────────────
-// Converts thumb URL → direct full file URL, bypasses hotlink block
-// e.g. /thumb/a/b/File.jpg/800px-File.jpg → /a/b/File.jpg
-function wikiImg(url) {
-  if (!url) return '';
-  if (!url.includes('/thumb/')) return url;
-  const after = url.split('/thumb/')[1];        // "a/b/File.jpg/800px-File.jpg"
-  const parts = after.split('/');               // ["a","b","File.jpg","800px-File.jpg"]
-  const base  = url.split('/thumb/')[0];
-  return `${base}/${parts[0]}/${parts[1]}/${parts[2]}`;  // → direct /a/b/File.jpg
-}
-
-// Shared img tag with referrer fix + onerror fallback
-function wikiTag(url, alt, cssClass, fallbackBg, fallbackLabel, style) {
-  const src = wikiImg(url);
-  const fb  = `<div class="${fallbackBg}" style="${style||''}">${fallbackLabel||''}</div>`;
-  return `<img src="${src}" alt="${alt}" class="${cssClass}"
-              referrerpolicy="no-referrer" loading="lazy"
-              onerror="this.outerHTML='${fb.replace(/'/g, '&#39;')}'">`;
+// Wikipedia /thumb/ URLs are CDN-optimised thumbnails designed for embedding.
+// DO NOT strip /thumb/ — that turns them into full multi-MB originals which
+// time out on slow connections. Just use the URL as-is with referrer policy.
+//
+// wikiTag(url, alt, cssClass, fallbackClass, fallbackLabel, inlineStyle)
+// Returns an <img> with referrerpolicy + crossorigin + loading=lazy,
+// and an onerror that swaps to the coloured placeholder div on failure.
+function wikiTag(url, alt, cssClass, fallbackClass, fallbackLabel, inlineStyle) {
+  if (!url) {
+    return `<div class="${fallbackClass}"${inlineStyle ? ` style="${inlineStyle}"` : ''}>${fallbackLabel || ''}</div>`;
+  }
+  // Escape single quotes inside the fallback HTML used in the onerror attribute
+  const label  = (fallbackLabel  || '').replace(/'/g, '&#39;').replace(/"/g, '&quot;');
+  const fClass = (fallbackClass  || '').replace(/'/g, '&#39;');
+  const fStyle = (inlineStyle    || '').replace(/'/g, '&#39;');
+  const imgClass = cssClass ? ` class="${cssClass}"` : '';
+  const imgStyle = inlineStyle ? ` style="${inlineStyle}"` : '';
+  return `<img src="${url}" alt="${alt}"${imgClass}${imgStyle}
+    referrerpolicy="no-referrer" crossorigin="anonymous" loading="lazy"
+    onerror="this.outerHTML='<div class=\\'${fClass}\\'${fStyle ? ` style=\\'${fStyle}\\'` : ''}>${label}</div>'">`;
 }
 
 // ─────────────────────────────────────────────
@@ -317,9 +319,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const v = volcanoData[key];
     if (!v) { console.warn('No volcano data for key:', key); return; }
 
-    // Hero image: use wikiTag helper for referrer fix; fallback to coloured placeholder
+    // Hero image — fallback is the coloured placeholder div
     const heroImg = v.imgUrl
-      ? wikiTag(v.imgUrl, v.name, 'modal-img', `modal-img-placeholder ${v.imgClass}`, v.name)
+      ? wikiTag(v.imgUrl, v.name, 'modal-img', `modal-img-placeholder ${v.imgClass}`, v.name, '')
       : `<div class="modal-img-placeholder ${v.imgClass}">${v.name}</div>`;
 
     openModal(`
