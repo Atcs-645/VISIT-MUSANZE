@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration:   '1–2 Days',
       difficulty: 'Strenuous',
       imgClass:   'bg-vol2',
-      imgUrl:     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Muhavura_Volcano_in_Rwanda.jpg/800px-Muhavura_Volcano_in_Rwanda.jpg',
+      imgUrl:     '',
       description: [
         'Mount Muhabura — "The Guide" — towers at 4,127 metres and was historically used as a navigation landmark by travellers across the Great Lakes region. Its perfectly symmetrical cone is visible for miles.',
         'A small crater lake sits at the summit, and on clear days panoramic views stretch far into Uganda, Rwanda and the DRC — a reward that justifies the strenuous 8–10 hour round trip.',
