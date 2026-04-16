@@ -7,9 +7,6 @@ const EMAILJS_TEMPLATE_ID = 'template_f8pccge';
 const EMAILJS_PUBLIC_KEY  = 'QICH0i1piXaX-4Rtx';
 
 // ─── Image helper ────────────────────────────────────────────────────────────
-// Places an <img> inside a div that has the gradient class as background.
-// onerror="this.remove()" removes ONLY the img — the gradient div + all
-// siblings (like modal-content) are NEVER touched. This is the root fix.
 function imgBox(url, gradClass, h, rounded) {
   const br = rounded ? `border-radius:${rounded};` : '';
   if (!url) {
@@ -89,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Global delegation for nav + footer
   document.addEventListener('click', e => {
     const el = e.target.closest('[data-page]');
-    if (!el || app.contains(el)) return;   // app links handled by bindAll
+    if (!el || app.contains(el)) return;
     e.preventDefault();
     navigate(el.dataset.page);
   });
@@ -98,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //  DATA
   // ─────────────────────────────────────────────────────────────────────────────
 
-  const V = {   // volcano detail data — all 5
+  const V = {
     karisimbi: {
       name: 'Mount Karisimbi', subtitle: 'The Roof of Rwanda',
       eyebrow: 'Dormant Stratovolcano', elevation: '4,507m', duration: '2 Days', difficulty: 'Challenging',
@@ -228,28 +225,46 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // ─────────────────────────────────────────────────────────────────────────────
-  //  VOLCANO MODAL
+  //  VOLCANO MODAL (FIXED)
   // ─────────────────────────────────────────────────────────────────────────────
   function openVolcanoModal(key) {
     const v = V[key];
     if (!v) return;
+    
+    // We use inline styles here to force visibility.
     openModal(`
       ${imgBox(v.img, v.grad, '300px', '12px 12px 0 0')}
-      <div class="modal-content">
-        <p class="modal-eyebrow">${v.eyebrow}</p>
-        <h2 class="modal-title">${v.name}</h2>
-        <p class="modal-subtitle">${v.subtitle}</p>
-        <div class="modal-stats">
-          <div class="modal-stat"><div class="modal-stat-num">${v.elevation}</div><div class="modal-stat-label">Elevation</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">${v.duration}</div><div class="modal-stat-label">Hike Duration</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">${v.difficulty}</div><div class="modal-stat-label">Difficulty</div></div>
+      <div class="modal-content" style="padding: 24px; background-color: #ffffff; color: #1a1a1a; display: block;">
+        <p class="modal-eyebrow" style="font-weight: 700; color: #d9534f; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 8px;">${v.eyebrow}</p>
+        <h2 class="modal-title" style="font-size: 2rem; margin: 0 0 8px 0; font-family: var(--ff-display, serif); line-height: 1.2;">${v.name}</h2>
+        <p class="modal-subtitle" style="font-size: 1.1rem; color: #555; margin-bottom: 20px; font-style: italic;">${v.subtitle}</p>
+        <div class="modal-stats" style="display: flex; gap: 16px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #eee;">
+          <div class="modal-stat" style="text-align: center;">
+             <div class="modal-stat-num" style="font-weight: bold; font-size: 1.1rem; color: #000;">${v.elevation}</div>
+             <div class="modal-stat-label" style="font-size: 0.8rem; color: #666;">Elevation</div>
+          </div>
+          <div class="modal-stat" style="text-align: center;">
+             <div class="modal-stat-num" style="font-weight: bold; font-size: 1.1rem; color: #000;">${v.duration}</div>
+             <div class="modal-stat-label" style="font-size: 0.8rem; color: #666;">Hike Duration</div>
+          </div>
+          <div class="modal-stat" style="text-align: center;">
+             <div class="modal-stat-num" style="font-weight: bold; font-size: 1.1rem; color: #000;">${v.difficulty}</div>
+             <div class="modal-stat-label" style="font-size: 0.8rem; color: #666;">Difficulty</div>
+          </div>
         </div>
-        <div class="modal-body-text">${v.desc.map(p => `<p>${p}</p>`).join('')}</div>
-        <div class="modal-activities">
-          <h4>Activities &amp; Experiences</h4>
-          <div class="activity-pills">${v.acts.map(a => `<span class="activity-pill">${a}</span>`).join('')}</div>
+        <div class="modal-body-text" style="margin-bottom: 24px; line-height: 1.6;">
+          ${v.desc.map(p => `<p style="margin-bottom: 12px;">${p}</p>`).join('')}
         </div>
-        <a href="${v.link}" target="_blank" rel="noopener" class="modal-book-btn">Book This Hike →</a>
+        <div class="modal-activities" style="margin-bottom: 32px;">
+          <h4 style="margin: 0 0 12px 0; font-size: 1rem;">Activities &amp; Experiences</h4>
+          <div class="activity-pills" style="display: flex; flex-wrap: wrap; gap: 8px;">
+            ${v.acts.map(a => `<span style="background: #f0f0f0; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; color: #333;">${a}</span>`).join('')}
+          </div>
+        </div>
+        <a href="${v.link}" target="_blank" rel="noopener" 
+           style="display: inline-block; background-color: #d9534f; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">
+           Book This Hike →
+        </a>
       </div>
     `);
   }
