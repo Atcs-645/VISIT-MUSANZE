@@ -4,35 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Visit Musanze — Rwanda's Highland Gem</title>
+  <meta name="description" content="Explore the majestic Virunga volcanoes, luxury hotels, and culture of Musanze, Rwanda.">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="vm.png">
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" data-page="home">
+      <a href="#" class="nav-logo" data-page="home" onclick="app.nav('home')">
         <span class="logo-text">Visit</span><span class="logo-accent">Musanze</span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links" id="nav-links">
-        <a href="#" class="nav-item active" data-page="home">Home</a>
-        <a href="#" class="nav-item" data-page="destinations">Destinations</a>
-        <a href="#" class="nav-item" data-page="trip">Plan Trip</a>
-        <a href="#" class="nav-item" data-page="sports">Activities</a>
-        <a href="#" class="nav-item" data-page="food">Food & Drink</a>
-        <a href="#" class="nav-item" data-page="advertise">Advertise</a>
-        <a href="#" class="nav-item nav-cta" data-page="login">Sign In</a>
+        <a href="#" class="nav-item active" data-page="home" onclick="app.nav('home')">Home</a>
+        <a href="#" class="nav-item" data-page="destinations" onclick="app.nav('destinations')">Destinations</a>
+        <a href="#" class="nav-item" data-page="volcanoes" onclick="app.nav('volcanoes')">Volcanoes</a>
+        <a href="#" class="nav-item" data-page="hotels" onclick="app.nav('hotels')">Stays</a>
+        <a href="#" class="nav-item" data-page="food" onclick="app.nav('food')">Dining</a>
+        <a href="#" class="nav-item" data-page="gallery" onclick="app.nav('gallery')">Gallery</a>
+        <a href="#" class="nav-item nav-cta" data-page="trip" onclick="app.nav('trip')">Plan Trip</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section id="hero">
     <div class="hero-video-wrap">
       <iframe
@@ -49,8 +59,8 @@
       <h1 class="hero-title">Discover<br><em>Musanze</em></h1>
       <p class="hero-sub">Where volcanoes meet gorillas, and culture meets adventure</p>
       <div class="hero-actions">
-        <button class="btn-primary" data-page="destinations">Explore Destinations</button>
-        <button class="btn-ghost" data-page="trip">Plan Your Trip</button>
+        <button class="btn-primary" onclick="app.nav('destinations')">Explore Experiences</button>
+        <button class="btn-ghost" onclick="app.nav('hotels')">Find Luxury</button>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -59,7 +69,7 @@
     </div>
   </section>
 
-  <!-- Main App Content -->
+  <!-- Dynamic Main Content -->
   <main id="app-content"></main>
 
   <!-- Footer -->
@@ -71,16 +81,23 @@
       </div>
       <div class="footer-links">
         <h4>Explore</h4>
-        <a href="#" data-page="destinations">Destinations</a>
-        <a href="#" data-page="sports">Activities</a>
-        <a href="#" data-page="food">Food & Drink</a>
-        <a href="#" data-page="trip">Plan a Trip</a>
+        <a href="#" onclick="app.nav('destinations')">Destinations</a>
+        <a href="#" onclick="app.nav('hotels')">Hotels & Lodges</a>
+        <a href="#" onclick="app.nav('food')">Restaurants</a>
+        <a href="#" onclick="app.nav('trip')">Travel Tips</a>
       </div>
       <div class="footer-links">
-        <h4>Company</h4>
-        <a href="#" data-page="advertise">Advertise</a>
-        <a href="#" data-page="login">Sign In</a>
-        <a href="mailto:cedrique000@gmail.com">Contact Us</a>
+        <h4>Support</h4>
+        <a href="#" onclick="app.nav('trip')">Planning Guide</a>
+        <a href="mailto:cedrique000@gmail.com">Contact Support</a>
+        <a href="https://www.rdb.rw/" target="_blank">Rwanda Dev Board</a>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <p style="color:var(--color-text-muted); font-size:0.9rem; margin-bottom:10px;">Kigali, Rwanda</p>
+        <div class="social-icons">
+          <span>IG</span> <span>TW</span> <span>FB</span>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -88,6 +105,15 @@
     </div>
   </footer>
 
+  <!-- Universal Modal -->
+  <div id="modal-overlay">
+    <div id="modal-container">
+      <button id="modal-close" aria-label="Close Modal">&times;</button>
+      <div id="modal-inner"></div>
+    </div>
+  </div>
+
+  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
